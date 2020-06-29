@@ -1,0 +1,94 @@
+.portfolio {
+	width: 100%;
+
+	#{&}__title {
+		width: 100%;
+		padding: 50px 0px 30px 0px;
+		text-align: center;
+
+		h2{ 
+			color: hashColor(title);
+			font-size: $_36;
+			letter-spacing: 0px;
+			}
+		p{ 
+			padding-top: 8px;
+		    color: hashColor(title);
+		    font-size: $_18;
+		  }
+	}
+
+	#{&}__menu-bar{ 
+		width: 41%;
+		margin-bottom: 20px; 
+		margin-left: 340px;
+		@include flex;
+		@include media(ipad){ margin-left: 0;  width: 100%;}
+		@include media(iphone){ margin-left: 0;width: 100%;}
+		li{ 
+			padding: 8px;
+			background-color: hashColor(primary);
+			margin: 0 8px;
+			@include media(ipad){ margin-left: 10px;  width: 100%;}
+			@include media(iphone){ margin: 0;}
+		}
+
+		a{
+		   width: 100%;
+		   color: hashColor(all);
+		   font-size: $_16;
+		}
+		li:hover{ 
+				background-color: hashColor(dark);
+				color: hashColor(all);
+				}
+		 
+  		}
+
+  	&__filter-items {
+  					width:100%;
+			  		padding-bottom: 50px;
+			 		margin-top: 40px;
+			  		@include flex;
+			    	li{ 
+						width: 22%;
+						margin-bottom: 20px;
+						margin-right: 35px;
+						border-radius: 50%;
+						position: relative;
+						overflow: hidden;
+
+					@include media(ipad){ width: 35%; margin: 0 0 0 80px; }
+					@include media(iphone){ width: 48%; margin: 0 5px 5px 0; }
+
+					& > img{ width: 100%;}
+			    	}
+
+			    	.hover-div{
+			    				  width: 70%;
+								  position: absolute;
+								  top: 25%;
+								  left: 15%;
+								  background-color: hashColor(all);
+								  text-align: center;
+								  transition: .5s ease;
+								   opacity: 0;
+								 }	
+						.hover-div img{
+								  width: 35%;
+								  margin: 5px;
+								  border-radius: 50%;
+								  border: none;
+								 }
+
+						 h3{ 
+							padding: 5px 0;	  
+							color: hashColor(h3);
+						    font-size: $_22; 
+							}
+			    }
+			    li:hover .hover-div {
+							  opacity: 1;
+							}
+
+}

@@ -1,0 +1,75 @@
+.top-bar {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	h1{
+		width: 100%;
+		@include media(ipad){width: 50%;}
+		@include media(iphone){
+			width: 100%;
+			margin: 25px 0 0 0 ;
+		}
+	a{
+		display: inline-block;
+	img{
+		width: 100%;}
+	  }
+	}
+
+nav {
+	width: 100%;
+	margin: 14px 0 0 200px;
+	@include media(ipad){margin: 0;}
+	@include media(iphone){margin: 0;}
+}  
+
+	.navbar {
+	@include flex;
+	@include media(iphone){
+		flex-direction: column;
+		margin-top: 100px;
+	}
+
+		li { margin: 10px;}
+
+		a {
+			padding: 10px 14px;
+			color: hashColor(title);
+			font-family: $sans-serif;
+			font-weight: $_550;
+		}
+
+		li:hover a {
+			color: hashColor(all);
+			background-color: hashColor(primary);
+		}
+	}
+ 
+ 	.hamburger{ display: none;}
+ 	
+ 	@include media(iphone){
+ 	.hamburger{
+    width:23px;
+    height:20px;
+    margin-left: auto;
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    cursor: pointer;
+  }
+  
+  .hamburger span{
+    width:100%;
+    height:4px;
+    display: block;
+    background-color: hashColor(primary);
+    text-indent: -9999px;
+  }
+  
+  .hamburger span:nth-child(1){margin-bottom: 4px;}
+
+  .hamburger span:nth-child(2){ margin-bottom: 4px;}
+}
+}

@@ -1,0 +1,40 @@
+footer{ 
+  width: 100%;
+  padding-bottom: 30px; 
+  position: relative;
+  background-color: hashColor(footer-background);
+ 
+  .copy{ width: 100%;}
+
+  .copy > span{ 
+              padding: 20px 20px 20px 20px;
+              display: block;
+              font-size: $_16;
+              color: hashColor(all);
+               } 
+  .copy__topto{
+        width: 7%;
+        margin: 20px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        text-indent: -9999px;
+        @include media(iphone){ 
+          top:-100%; 
+          right: 10%;
+         }
+      }
+
+.copy__topto::before{
+  width: 60px;
+  float: left;
+  content: '\f106'; 
+  cursor: pointer;
+  color: hashColor(all);
+  background-color: hashColor(primary);
+  font-family: $fontAwesome;
+  font-size: $_50;
+  text-align: center;
+  text-indent: 0;
+} 
+}
